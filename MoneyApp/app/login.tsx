@@ -24,7 +24,8 @@ container:{
 },
 mainText:{
   fontSize:25,
-  color:"#A5243D",
+  // color:"#A5243D",
+  color:"#AA8422",
   padding:5
 },
 inputText:{
@@ -37,7 +38,8 @@ borderWidth:0
 },
 logIn:{
   fontSize:40,
-  color:"#A5243D",
+  // color:"#A5243D",
+  color:"#F2E3BC",
   textAlign:"center",
   height:50,
   margin :100,
