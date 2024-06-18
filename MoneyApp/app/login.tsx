@@ -1,5 +1,6 @@
-import {View, Button,Text, StatusBar,SafeAreaView,StyleSheet,TextInput, Pressable} from "react-native";
+import {View, Button,Text, StatusBar,SafeAreaView,StyleSheet,TextInput, Pressable, TouchableOpacity} from "react-native";
 import { useState } from "react";
+import { Link } from "expo-router";
 export default function Index() {
   const [name,setName]=useState("")
    const [password,setPassword]=useState("")
@@ -10,9 +11,12 @@ export default function Index() {
         <TextInput style={styles.inputText} value={name} onChangeText={setName}/>
         <Text style = {styles.mainText}>Password</Text>
         <TextInput style={styles.inputText} value={password} onChangeText={setPassword}/>
-       <Pressable onPress={()=>console.log("logIn pressed")}>
+        <TouchableOpacity style={styles.logInButton}>
+        <Link href="/budget" style={styles.buttonText}>Log In</Link>
+        </TouchableOpacity>
+       {/* <Pressable onPress={()=>console.log("logIn pressed")}>
         <Text style = {styles.logIn}>Log In</Text>
-       </Pressable>
+       </Pressable> */}
         </SafeAreaView>
   );
 }
@@ -25,25 +29,28 @@ container:{
 mainText:{
   fontSize:25,
   // color:"#A5243D",
-  color:"#AA8422",
+  color:"#5f5533",
   padding:5
 },
 inputText:{
 height:40,
 margin: 2,
 color:"#861D32",
-backgroundColor:"#EBD499",
+backgroundColor:"#FFD7A7",
 padding:10,
 borderWidth:0
 },
-logIn:{
-  fontSize:40,
-  // color:"#A5243D",
-  color:"#F2E3BC",
-  textAlign:"center",
-  height:50,
-  margin :100,
-  backgroundColor:"#AA8422",
-}
-
+logInButton:{
+    backgroundColor: '#FFB685',
+    paddingVertical: 15,
+    paddingHorizontal: 150,
+    borderRadius: 10,
+    marginVertical: 10,
+  },
+  buttonText: {
+    color: '#5e5533',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  }
 })
