@@ -1,4 +1,3 @@
-// This is our start page or home page or Root
 
 import { Text, View, Image, StyleSheet, TouchableOpacity} from "react-native";
 import { Link } from "expo-router";
@@ -17,7 +16,7 @@ export default function StartPage() {
         alignItems: "center",
       }}
     >
-      <Image source={require('../assets/images/Galvin-Logo-Idea.png')}
+      <Image source={require('/Users/galvinliu/Desktop/Money-Manager/MoneyApp/assets/images/Galvin-Logo-Idea.png')}
         style={{ width: 300, height: 300, borderRadius: 150}} />
       <Text style={{fontSize:20}}>Welcome to Money Manager!</Text>
       <TouchableOpacity style={styles.button}>
