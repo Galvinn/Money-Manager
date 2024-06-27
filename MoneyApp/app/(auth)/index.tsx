@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 // This is a function
 // Next step: need to handle navigation (makes the whole button pressable)
-export default function Start() {
+export default function StartPage() {
   return (
     <View
       style={{
