@@ -2,7 +2,6 @@
 
 import { Text, View, Image, StyleSheet, TouchableOpacity} from "react-native";
 import { Link } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 // This is a function
 // Next step: need to handle navigation (makes the whole button pressable)

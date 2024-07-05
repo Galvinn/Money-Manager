@@ -1,4 +1,4 @@
-import {View, Button,Text, StatusBar,SafeAreaView,StyleSheet,TextInput, Pressable} from "react-native";
+import {Text, StatusBar,SafeAreaView,StyleSheet,TextInput, Pressable} from "react-native";
 import { useState } from "react";
 export default function Index() {
   const [name,setName]=useState("")
