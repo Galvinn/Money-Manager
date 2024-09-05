@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet, TouchableOpacity} from "react-native";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 // This is a function
 // Next step: need to handle navigation (makes the whole button pressable)
 export default function Index() {
@@ -17,11 +18,18 @@ export default function Index() {
       <Image source={require('/Users/galvinliu/Desktop/Money-Manager/MoneyApp/assets/images/Galvin-Logo-Idea.png')}
         style={{ width: 300, height: 300, borderRadius: 150}} />
       <Text style={{fontSize:20}}>Welcome to Money Manager!</Text>
-      <TouchableOpacity style={styles.button}>
-        <Link href="/login" style={styles.buttonText}>Log In</Link>
+      <TouchableOpacity 
+        style={styles.button} 
+        onPress={() => router.push("/(auth)/login")}
+      >
+        <Text style={styles.buttonText}>Log In</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Link href="/signup" style={styles.buttonText}>Sign Up</Link>
+
+      <TouchableOpacity 
+        style={styles.button} 
+        onPress={() => router.push("/(auth)/signup")}
+      >
+        <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
 
